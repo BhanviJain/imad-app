@@ -1,12 +1,12 @@
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
+var express = require('express');//libraries
+var morgan = require('morgan');//library 
+var path = require('path');//library
 
 var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));// to handle specific urls
 });
 
 app.get('/ui/style.css', function (req, res) {
